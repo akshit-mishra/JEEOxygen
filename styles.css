@@ -1,0 +1,31 @@
+* { box-sizing: border-box; font-family: Arial, sans-serif; }
+body { margin: 0; background: #f0f2f5; height: 100vh; display: flex; flex-direction: column; }
+
+.container { padding: 20px; }
+.hidden { display: none !important; }
+
+/* Setup Screen */
+.setup-container { max-width: 500px; margin: 50px auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+label { font-weight: bold; margin-top: 15px; display: block; }
+input, textarea { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; }
+button { margin-top: 20px; width: 100%; padding: 12px; background: #2563eb; color: white; border: none; border-radius: 4px; font-size: 1.1em; cursor: pointer; }
+button:hover { background: #1d4ed8; }
+
+/* CBT Screen */
+.cbt-container { display: flex; height: 100vh; padding: 0; }
+.pdf-viewer { flex: 7; border-right: 2px solid #ccc; }
+#pdf-frame { width: 100%; height: 100%; border: none; }
+
+.omr-section { flex: 3; display: flex; flex-direction: column; background: white; padding: 15px; overflow-y: auto; }
+.header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 20px; }
+.timer { background: #dc2626; color: white; padding: 5px 15px; border-radius: 4px; font-weight: bold; font-size: 1.2em; }
+
+.omr-row { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; padding: 10px; border: 1px solid #f0f0f0; border-radius: 5px; }
+.q-num { font-weight: bold; width: 30px; }
+.option-btn { width: 35px; height: 35px; border-radius: 50%; border: 1px solid #ccc; background: white; cursor: pointer; font-weight: bold; }
+.option-btn.selected { background: #2563eb; color: white; border-color: #2563eb; }
+
+.submit-btn { background: #16a34a; margin-top: auto; }
+
+/* Result Screen */
+.result-container { text-align: center; max-width: 500px; margin: 50px auto; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
