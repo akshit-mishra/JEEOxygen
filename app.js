@@ -3,12 +3,13 @@
 // Replace this with your actual Firebase config from your project settings
 // ==========================================
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT_ID.appspot.com",
-    messagingSenderId: "YOUR_SENDER_ID",
-    appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyD4rCxulp98-gOvKKDL5806FB25OXLJclo",
+  authDomain: "jeeoxygen.firebaseapp.com",
+  projectId: "jeeoxygen",
+  storageBucket: "jeeoxygen.firebasestorage.app",
+  messagingSenderId: "778098212167",
+  appId: "1:778098212167:web:5c2a3f6ff48089ac19e062",
+  measurementId: "G-5YMQ72WDX8"
 };
 
 // Initialize Firebase
