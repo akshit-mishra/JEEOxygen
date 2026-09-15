@@ -14,16 +14,11 @@ const firebaseConfig = {
 document.getElementById('setup-screen').classList.add('hidden');
     document.getElementById('cbt-screen').classList.remove('hidden');
 
-    // Start Timer based on user input
-    const durationMinutes = parseInt(document.getElementById('test-duration').value);
-    startTimer(durationMinutes * 60);
-}
-
-function selectOption(qNumber, option, rowElement) {
 // ... existing code ...
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
+
 
 // ==========================================
 // 2. CBT LOGIC
@@ -76,12 +71,13 @@ function startTest() {
         omrGrid.appendChild(row);
     }
 
-    // Switch screens
+   // Switch screens
     document.getElementById('setup-screen').classList.add('hidden');
     document.getElementById('cbt-screen').classList.remove('hidden');
 
-    // Start 1 Hour Timer (3600 seconds)
-    startTimer(3600);
+    // Start Timer based on user input
+    const durationMinutes = parseInt(document.getElementById('test-duration').value);
+    startTimer(durationMinutes * 60);
 }
 
 function selectOption(qNumber, option, rowElement) {
