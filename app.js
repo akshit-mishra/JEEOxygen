@@ -11,14 +11,10 @@ const firebaseConfig = {
   appId: "1:778098212167:web:5c2a3f6ff48089ac19e062",
   measurementId: "G-5YMQ72WDX8"
 };
-document.getElementById('setup-screen').classList.add('hidden');
-    document.getElementById('cbt-screen').classList.remove('hidden');
 
-// ... existing code ...
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
-
 
 // ==========================================
 // 2. CBT LOGIC
@@ -64,14 +60,14 @@ function startTest() {
             const btn = document.createElement('button');
             btn.className = 'option-btn';
             btn.innerText = opt;
-            btn.onclick = () => selectOption(i, opt, row);
+            btn.onclick = (event) => selectOption(i, opt, row, event);
             row.appendChild(btn);
         });
         
         omrGrid.appendChild(row);
     }
 
-   // Switch screens
+    // Switch screens
     document.getElementById('setup-screen').classList.add('hidden');
     document.getElementById('cbt-screen').classList.remove('hidden');
 
@@ -80,7 +76,7 @@ function startTest() {
     startTimer(durationMinutes * 60);
 }
 
-function selectOption(qNumber, option, rowElement) {
+function selectOption(qNumber, option, rowElement, event) {
     userAnswers[qNumber - 1] = option; // Store answer (0-indexed array)
     
     // Remove selected class from all buttons in this row
