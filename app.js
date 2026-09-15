@@ -11,7 +11,16 @@ const firebaseConfig = {
   appId: "1:778098212167:web:5c2a3f6ff48089ac19e062",
   measurementId: "G-5YMQ72WDX8"
 };
+document.getElementById('setup-screen').classList.add('hidden');
+    document.getElementById('cbt-screen').classList.remove('hidden');
 
+    // Start Timer based on user input
+    const durationMinutes = parseInt(document.getElementById('test-duration').value);
+    startTimer(durationMinutes * 60);
+}
+
+function selectOption(qNumber, option, rowElement) {
+// ... existing code ...
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
